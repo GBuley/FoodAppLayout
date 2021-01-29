@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FoodAppLayout</string>
+    <string name="name">Bona Italian</string>
+    <string name="desc">Tasty spicy</string>
+    <string name="search">Search</string>
+    <string name="florentine_steak">Florentine Steak</string>
+    <string name="food_1_desc">Margherita of Naples with the thick crust.</string>
+    <string name="price_1">20.00 usd</string>
+    <string name="check_list">Check List</string>
+</resources>

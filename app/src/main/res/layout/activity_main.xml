@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/back"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/margin_horizontal"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_pic"
+        app:srcCompat="@drawable/ic_shopping_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/margin_horizontal"
+        android:background="@drawable/circle_border"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_place_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_alignParentStart="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/text_gl"
+        android:textAppearance="@style/TextAppearance.MyTheme.Headline4"
+        android:textStyle="bold"
+        android:textColor="?colorPrimaryVariant"
+        style="@style/margin_horizontal" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_place_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desc"
+        android:layout_alignParentStart="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_gl"
+        android:textAppearance="@style/TextAppearance.MyTheme.Headline4"
+        android:textColor="?colorPrimaryVariant"
+        style="@style/margin_horizontal"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bottom_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white_50"
+        app:layout_constraintTop_toBottomOf="@id/food_place_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="25dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyTheme.Bottom_Background"
+        />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/magnifying_glass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottom_view"
+        style="@style/margin_horizontal.below"
+        app:strokeColor="@color/black_900"
+        android:background="@drawable/border"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        app:layout_constraintTop_toTopOf="@id/bottom_view"
+        app:layout_constraintStart_toEndOf="@+id/magnifying_glass"
+        style="@style/margin_horizontal.below"
+        android:textAppearance="@style/TextAppearance.MyTheme.Subtitle1"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/settings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_vertical_slides_512"
+        app:layout_constraintStart_toStartOf="@+id/profile_pic"
+        app:layout_constraintEnd_toEndOf="@id/profile_pic"
+        app:layout_constraintTop_toTopOf="@id/magnifying_glass"
+        app:layout_constraintBottom_toBottomOf="@id/magnifying_glass"
+        app:strokeColor="@color/black_900"
+        />
+<!--FOOD 1-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/food_1_image"
+        android:src="@drawable/florentine_steak"
+        app:layout_constraintTop_toBottomOf="@+id/food_image_1_gl"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_1_gl_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/food_image_1_gl_vert"
+        style="@style/food_image"
+        android:background="?colorPrimary"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/florentine_steak"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintTop_toTopOf="@id/food_1_image"
+        style="@style/food_text.title"
+        android:textColor="?colorPrimaryVariant"
+        android:paddingEnd="50dp"
+        android:paddingBottom="5dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_desc_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/food_title_1"
+        app:layout_constraintTop_toBottomOf="@id/food_title_1"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_1_gl_2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:paddingBottom="5dp"
+        android:text="@string/food_1_desc"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_button_1"
+        app:layout_constraintStart_toStartOf="@id/settings"
+        app:layout_constraintEnd_toEndOf="@id/settings"
+        app:layout_constraintTop_toBottomOf="@id/food_image_1_gl"
+        app:layout_constraintBottom_toTopOf="@id/food_desc_1"
+        android:drawableBottom="@drawable/ic_baseline_add_24"
+        style="@style/add_button"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price_1"
+        style="@style/price_text"
+        app:layout_constraintStart_toStartOf="@id/price_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/plus_button_1"
+        app:layout_constraintTop_toBottomOf="@id/food_desc_1"
+        android:text="@string/price_1"
+        android:paddingBottom="5dp"
+        android:textColor="?colorSecondary"
+        />
+<!-- FOOD 2 -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/food_2_image"
+        android:src="@drawable/florentine_steak"
+        app:layout_constraintTop_toBottomOf="@+id/food_image_2_gl_1"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_2_gl_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/food_image_1_gl_vert"
+        style="@style/food_image"
+        android:background="?colorPrimary"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/florentine_steak"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintTop_toTopOf="@id/food_2_image"
+        style="@style/food_text.title"
+        android:textColor="?colorPrimaryVariant"
+        android:paddingEnd="50dp"
+        android:paddingBottom="5dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_desc_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/food_title_2"
+        app:layout_constraintTop_toBottomOf="@id/food_title_2"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_2_gl_2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:paddingBottom="5dp"
+        android:text="@string/food_1_desc"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_button_2"
+        app:layout_constraintStart_toStartOf="@id/settings"
+        app:layout_constraintEnd_toEndOf="@id/settings"
+        app:layout_constraintTop_toBottomOf="@id/food_image_2_gl_1"
+        app:layout_constraintBottom_toTopOf="@id/food_desc_2"
+        android:drawableBottom="@drawable/ic_baseline_add_24"
+        style="@style/add_button"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price_2"
+        style="@style/price_text"
+        app:layout_constraintStart_toStartOf="@id/price_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/plus_button_2"
+        app:layout_constraintTop_toBottomOf="@id/food_desc_2"
+        android:text="@string/price_1"
+        android:paddingBottom="5dp"
+        android:textColor="?colorSecondary"
+        />
+<!-- FOOD 3 -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/food_3_image"
+        android:src="@drawable/florentine_steak"
+        app:layout_constraintTop_toBottomOf="@+id/food_image_3_gl_1"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_3_gl_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/food_image_1_gl_vert"
+        style="@style/food_image"
+        android:background="?colorPrimary"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_title_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/florentine_steak"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintTop_toTopOf="@id/food_3_image"
+        style="@style/food_text.title"
+        android:textColor="?colorPrimaryVariant"
+        android:paddingEnd="50dp"
+        android:paddingBottom="5dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_desc_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/food_title_3"
+        app:layout_constraintTop_toBottomOf="@id/food_title_3"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_3_gl_2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:paddingBottom="5dp"
+        android:text="@string/food_1_desc"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_button_3"
+        app:layout_constraintStart_toStartOf="@id/settings"
+        app:layout_constraintEnd_toEndOf="@id/settings"
+        app:layout_constraintTop_toBottomOf="@id/food_image_3_gl_1"
+        app:layout_constraintBottom_toTopOf="@id/food_desc_3"
+        android:drawableBottom="@drawable/ic_baseline_add_24"
+        style="@style/add_button"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price_3"
+        style="@style/price_text"
+        app:layout_constraintStart_toStartOf="@id/price_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/plus_button_3"
+        app:layout_constraintTop_toBottomOf="@id/food_desc_3"
+        android:text="@string/price_1"
+        android:paddingBottom="5dp"
+        android:textColor="?colorSecondary"
+        />
+<!--  FOOD 4  -->
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/food_4_image"
+        android:src="@drawable/florentine_steak"
+        app:layout_constraintTop_toBottomOf="@+id/food_image_4_gl_1"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_4_gl_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/food_image_1_gl_vert"
+        style="@style/food_image"
+        android:background="?colorPrimary"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_title_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/florentine_steak"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintTop_toTopOf="@id/food_4_image"
+        style="@style/food_text.title"
+        android:textColor="?colorPrimaryVariant"
+        android:paddingEnd="50dp"
+        android:paddingBottom="5dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_desc_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/food_image_1_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/food_title_4"
+        app:layout_constraintTop_toBottomOf="@id/food_title_4"
+        app:layout_constraintBottom_toBottomOf="@id/food_image_4_gl_2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:paddingBottom="5dp"
+        android:text="@string/food_1_desc"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_button_4"
+        app:layout_constraintStart_toStartOf="@id/settings"
+        app:layout_constraintEnd_toEndOf="@id/settings"
+        app:layout_constraintTop_toBottomOf="@id/food_image_4_gl_1"
+        app:layout_constraintBottom_toTopOf="@id/food_desc_4"
+        android:drawableBottom="@drawable/ic_baseline_add_24"
+        style="@style/add_button"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price_4"
+        style="@style/price_text"
+        app:layout_constraintStart_toStartOf="@id/price_gl_vert"
+        app:layout_constraintEnd_toEndOf="@id/plus_button_4"
+        app:layout_constraintTop_toBottomOf="@id/food_desc_4"
+        android:text="@string/price_1"
+        android:paddingBottom="5dp"
+        android:textColor="?colorSecondary"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/price_4"
+        app:layout_constraintStart_toEndOf="@id/food_image_1_gl_vert"
+        app:layout_constraintEnd_toStartOf="@id/price_gl_vert"
+        android:text="@string/check_list"
+        android:textAllCaps="false"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/text_gl"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".17"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_1_gl"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_1_gl_2"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_2_gl_1"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".53" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_2_gl_2"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_3_gl_1"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_3_gl_2"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".76" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_4_gl_1"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".79" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_4_gl_2"
+        style="@style/guideline.horizontal"
+        app:layout_constraintGuide_percent=".89" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/food_image_1_gl_vert"
+        style="@style/guideline.vertical"
+        app:layout_constraintGuide_percent=".25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/price_gl_vert"
+        style="@style/guideline.vertical"
+        app:layout_constraintGuide_percent=".75"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
